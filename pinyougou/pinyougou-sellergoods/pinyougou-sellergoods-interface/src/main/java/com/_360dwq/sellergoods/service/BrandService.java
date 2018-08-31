@@ -2,6 +2,7 @@ package com._360dwq.sellergoods.service;
 
 import com._360dwq.pojo.TbBrand;
 import com._360dwq.service.BaseService;
+import com._360dwq.vo.PageResult;
 
 import java.util.List;
 
@@ -15,4 +16,6 @@ public interface BrandService extends BaseService<TbBrand> {
     List<TbBrand> queryAll();
 
     List<TbBrand> testPage(Integer page, Integer rows);
+
+    PageResult search(TbBrand tbBrand, Integer page, Integer rows);
 }

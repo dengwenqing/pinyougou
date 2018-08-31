@@ -22,6 +22,7 @@ app.controller("specificationController", function ($scope, $controller, specifi
         if($scope.entity.specification.id != null){//更新
             object = specificationService.update($scope.entity);
         } else {//新增
+            console.log($scope.entity);
             object = specificationService.add($scope.entity);
         }
         object.success(function (response) {
@@ -62,7 +63,6 @@ app.controller("specificationController", function ($scope, $controller, specifi
             $scope.list = response.rows;
             $scope.paginationConf.totalItems = response.total;
         });
-
     };
 
     //新增规格选项
